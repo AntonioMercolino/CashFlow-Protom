@@ -1,0 +1,42 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+# =========================================================
+# CASHFLOW FORECAST LINE
+# =========================================================
+access_cashflow_forecast_user,access_cashflow_forecast_user,model_cashflow_forecast_line,cashflow.group_cashflow_user,1,0,0,0
+access_cashflow_forecast_manager,access_cashflow_forecast_manager,model_cashflow_forecast_line,cashflow.group_cashflow_manager,1,1,0,0
+access_cashflow_forecast_admin,access_cashflow_forecast_admin,model_cashflow_forecast_line,cashflow.group_cashflow_admin,1,1,1,1
+
+# =========================================================
+# CASHFLOW RECURRING COST
+# =========================================================
+access_cashflow_recurring_cost_user,access_cashflow_recurring_cost_user,model_cashflow_recurring_cost,cashflow.group_cashflow_user,1,0,0,0
+access_cashflow_recurring_cost_manager,access_cashflow_recurring_cost_manager,model_cashflow_recurring_cost,cashflow.group_cashflow_manager,1,1,1,0
+access_cashflow_recurring_cost_admin,access_cashflow_recurring_cost_admin,model_cashflow_recurring_cost,cashflow.group_cashflow_admin,1,1,1,1
+
+# =========================================================
+# CASHFLOW LOAN
+# =========================================================
+access_cashflow_loan_user,access_cashflow_loan_user,model_cashflow_loan,cashflow.group_cashflow_user,1,0,0,0
+access_cashflow_loan_manager,access_cashflow_loan_manager,model_cashflow_loan,cashflow.group_cashflow_manager,1,1,1,0
+access_cashflow_loan_admin,access_cashflow_loan_admin,model_cashflow_loan,cashflow.group_cashflow_admin,1,1,1,1
+
+# =========================================================
+# CASHFLOW LOAN INSTALLMENT
+# =========================================================
+access_cashflow_loan_installment_user,access_cashflow_loan_installment_user,model_cashflow_loan_installment,cashflow.group_cashflow_user,1,0,0,0
+access_cashflow_loan_installment_manager,access_cashflow_loan_installment_manager,model_cashflow_loan_installment,cashflow.group_cashflow_manager,1,1,1,0
+access_cashflow_loan_installment_admin,access_cashflow_loan_installment_admin,model_cashflow_loan_installment,cashflow.group_cashflow_admin,1,1,1,1
+
+# =========================================================
+# CASHFLOW BANK FACILITY
+# =========================================================
+access_cashflow_bank_facility_user,access_cashflow_bank_facility_user,model_cashflow_bank_facility,cashflow.group_cashflow_user,1,0,0,0
+access_cashflow_bank_facility_manager,access_cashflow_bank_facility_manager,model_cashflow_bank_facility,cashflow.group_cashflow_manager,1,1,1,0
+access_cashflow_bank_facility_admin,access_cashflow_bank_facility_admin,model_cashflow_bank_facility,cashflow.group_cashflow_admin,1,1,1,1
+
+# =========================================================
+# CASHFLOW SIMULATION
+# =========================================================
+access_cashflow_simulation_user,access_cashflow_simulation_user,model_cashflow_simulation,cashflow.group_cashflow_user,1,1,1,1
+access_cashflow_simulation_manager,access_cashflow_simulation_manager,model_cashflow_simulation,cashflow.group_cashflow_manager,1,1,1,1
+access_cashflow_simulation_admin,access_cashflow_simulation_admin,model_cashflow_simulation,cashflow.group_cashflow_admin,1,1,1,1

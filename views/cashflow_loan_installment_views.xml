@@ -1,0 +1,52 @@
+<odoo>
+
+    <!-- ========================================================= -->
+    <!--     ACTION RATE                                           -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_loan_installment" model="ir.actions.act_window">
+        <field name="name">Rate Mutuo / Leasing</field>
+        <field name="res_model">cashflow.loan.installment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- ========================================================= -->
+    <!--     TREE VIEW                                             -->
+    <!-- ========================================================= -->
+
+    <record id="view_cashflow_loan_installment_tree" model="ir.ui.view">
+        <field name="name">cashflow.loan.installment.tree</field>
+        <field name="model">cashflow.loan.installment</field>
+        <field name="arch" type="xml">
+            <tree string="Rate">
+                <field name="loan_id"/>
+                <field name="date"/>
+                <field name="amount"/>
+                <field name="company_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ========================================================= -->
+    <!--     FORM VIEW                                             -->
+    <!-- ========================================================= -->
+
+    <record id="view_cashflow_loan_installment_form" model="ir.ui.view">
+        <field name="name">cashflow.loan.installment.form</field>
+        <field name="model">cashflow.loan.installment</field>
+        <field name="arch" type="xml">
+            <form string="Rata">
+                <sheet>
+                    <group>
+                        <field name="loan_id" readonly="1"/>
+                        <field name="date"/>
+                        <field name="amount"/>
+                        <field name="currency_id" readonly="1"/>
+                        <field name="company_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
