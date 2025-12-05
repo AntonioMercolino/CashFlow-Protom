@@ -138,9 +138,22 @@ Campi aggiunti:
 - Tree view
 - Form view
 
+### Dashboard Analitica
+- **Punto di accesso:** Tramite il Wizard di selezione parametri.
+- **Vista Graph:** Analisi visiva aggregata per data (`interval="month"`) e tipo di flusso/categoria.
+- **Vista Pivot:** Analisi tabellare dettagliata per data, categoria, partner e banca.
+
+### Gestione Categorie
+- Tree view e Form view per la creazione e la gestione delle `cashflow.category`.
+
+---
 ---
 
 ## 🔐 Sicurezza
+
+### Categoria Applicazione
+- **Nome:** `Cashflow Management`
+- **Scopo:** Permette la corretta visualizzazione e raggruppamento dei permessi nella scheda Utente di Odoo.
 
 ### Gruppi:
 - `Cashflow User`
@@ -189,16 +202,14 @@ Campi aggiunti:
 
 ---
 
+---
+
 ## 🚀 Installazione
 
 1. Copiare la cartella `cashflow` in `/odoo/custom/addons/`
-2. Aggiornare elenco moduli:
-```
-odoo-bin -u cashflow -d <database>
-```
-3. Accedere al menu Cashflow dopo l'installazione.
-
----
+2. Aggiornare elenco moduli in Odoo.
+3. Installare il modulo **Protom Cashflow** dall'App Menu.
+4. (Importante) **Assegnare il gruppo di sicurezza** (es. Cashflow User) agli utenti interessati per rendere l'applicazione visibile.
 
 ## 👨‍💻 Autore
 
