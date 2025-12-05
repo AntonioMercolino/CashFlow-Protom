@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="cashflow.dashboard.template">
+        <div class="cashflow-dashboard-container">
+
+            <t t-if="state.loading">
+                <div class="o_dashboard_spinner">Caricamento...</div>
+            </t>
+
+            <t t-if="!state.loading">
+                <h1>Dashboard Cashflow</h1>
+
+                <div class="kpi-row">
+                    <div class="kpi-box">
+                        <h3>Saldo Netto</h3>
+                        <span t-esc="state.kpi.balance"/> €
+                    </div>
+
+                    <div class="kpi-box">
+                        <h3>Incassi Previsti</h3>
+                        <span t-esc="state.kpi.income"/> €
+                    </div>
+
+                    <div class="kpi-box">
+                        <h3>Pagamenti Previsti</h3>
+                        <span t-esc="state.kpi.outcome"/> €
+                    </div>
+                </div>
+
+                <div class="chart-area">
+                    <h3>Andamento saldo</h3>
+                    <pre><t t-esc="JSON.stringify(state.chart.daily, null, 2)" /></pre>
+                </div>
+
+            </t>
+        </div>
+    </t>
+
+</templates>

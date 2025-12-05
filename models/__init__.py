@@ -4,3 +4,7 @@ from . import account_bank_statement_line
 from . import cashflow_forecast_line
 from . import cashflow_loan
 from . import cashflow_loan_installment
+from . import cashflow_bank_facility
+from . import cashflow_simulation
+from . import cashflow_recurring_cost
+from . import cashflow_category

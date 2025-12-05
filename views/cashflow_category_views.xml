@@ -1,0 +1,51 @@
+<odoo>
+    <record id="view_cashflow_category_tree" model="ir.ui.view">
+        <field name="name">cashflow.category.tree</field>
+        <field name="model">cashflow.category</field>
+        <field name="arch" type="xml">
+            <tree string="Cashflow Categories">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_cashflow_category_form" model="ir.ui.view">
+        <field name="name">cashflow.category.form</field>
+        <field name="model">cashflow.category</field>
+        <field name="arch" type="xml">
+            <form string="Cashflow Category">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cashflow_category" model="ir.actions.act_window">
+        <field name="name">Cashflow Categories</field>
+        <field name="res_model">cashflow.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        id="menu_cashflow_category_root" 
+        name="Configuration" 
+        parent="menu_cashflow_root" 
+        sequence="99"
+    />
+    <menuitem 
+        id="menu_cashflow_category" 
+        name="Cashflow Categories" 
+        parent="menu_cashflow_category_root" 
+        action="action_cashflow_category" 
+        sequence="10"
+    />
+</odoo>

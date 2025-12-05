@@ -1,4 +1,4 @@
-from . import odoo, models, fields
+from odoo import  models, fields
 
 class CashFlowRecurringCost(models.Model):
     _name = "cashflow.recurring.cost"

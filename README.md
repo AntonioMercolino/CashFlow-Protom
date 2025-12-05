@@ -204,3 +204,15 @@ odoo-bin -u cashflow -d <database>
 
 Progetto Cashflow Odoo  
 Sviluppato da: **Antonio Mercolino**
+
+## Menu
+```
+Cashflow
+ ├── Dashboard
+ ├── Previsioni
+ ├── Mutui e Leasing
+ ├── Rate
+ ├── Costi Ricorrenti
+ ├── Castelletti Bancari
+ └── Simulazioni
+```

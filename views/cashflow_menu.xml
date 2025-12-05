@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem id="menu_cashflow_root" name="Cashflow" sequence="10" web_icon="cashflow,static/description/icon.png" />
+
+    <menuitem id="menu_cashflow_dashboard" name="Dashboard" parent="menu_cashflow_root" action="action_cashflow_dashboard_wizard" sequence="1"/>
+
+</odoo>

@@ -1,4 +1,4 @@
-from . import odoo, models, fields
+from odoo import  models, fields
 
 class CashflowSimulation(models.Model):
     _name = "cashflow.simulation"

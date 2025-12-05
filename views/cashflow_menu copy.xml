@@ -1,0 +1,133 @@
+<odoo>
+
+    =========================================================
+    <!--  MENU PRINCIPALE CASHFLOW                                 -->
+    <!-- ========================================================= -->
+
+    <!-- Menu principale visibile nella barra laterale sinistra -->
+    <menuitem 
+            id="menu_cashflow_root" 
+            name="Cashflow" 
+            sequence="10" 
+            web_icon="cashflow,static/description/icon.png" 
+        />
+    <!-- ========================================================= -->
+    <!--  DASHBOARD                                                 -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_dashboard_wizard" model="ir.actions.act_window">
+            <field name="name">Dashboard Cashflow</field>
+            <field name="res_model">cashflow.dashboard.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field> </record>
+
+    <menuitem id="menu_cashflow_dashboard"
+              name="Dashboard"
+              parent="menu_cashflow_root" action="action_cashflow_dashboard_wizard"
+              sequence="1"/>
+
+    
+
+    <!-- ========================================================= -->
+    <!--  PREVISIONI / FORECAST                                    -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_forecast" model="ir.actions.act_window">
+        <field name="name">Previsioni Cashflow</field>
+        <field name="res_model">cashflow.forecast.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cashflow_forecast"
+              name="Previsioni"
+              parent="menu_cashflow_root"
+              action="action_cashflow_forecast"
+              sequence="5"/>
+
+
+    <!-- ========================================================= -->
+    <!--  MUTUI / LEASING                                           -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_loan" model="ir.actions.act_window">
+        <field name="name">Mutui e Leasing</field>
+        <field name="res_model">cashflow.loan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cashflow_loan"
+              name="Mutui e Leasing"
+              parent="menu_cashflow_root"
+              action="action_cashflow_loan"
+              sequence="10"/>
+
+
+    <!-- ========================================================= -->
+    <!--  RATE MUTUI                                                -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_loan_installment" model="ir.actions.act_window">
+        <field name="name">Rate Mutui / Leasing</field>
+        <field name="res_model">cashflow.loan.installment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cashflow_loan_installment"
+              name="Rate"
+              parent="menu_cashflow_root"
+              action="action_cashflow_loan_installment"
+              sequence="11"/>
+
+
+    <!-- ========================================================= -->
+    <!--  COSTI RICORRENTI                                          -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_recurring_cost" model="ir.actions.act_window">
+        <field name="name">Costi Ricorrenti</field>
+        <field name="res_model">cashflow.recurring.cost</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cashflow_recurring_cost"
+              name="Costi Ricorrenti"
+              parent="menu_cashflow_root"
+              action="action_cashflow_recurring_cost"
+              sequence="15"/>
+
+
+    <!-- ========================================================= -->
+    <!--  CASTELLETTI BANCARI                                      -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_bank_facility" model="ir.actions.act_window">
+        <field name="name">Castelletti Bancari</field>
+        <field name="res_model">cashflow.bank.facility</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cashflow_bank_facility"
+              name="Castelletti Bancari"
+              parent="menu_cashflow_root"
+              action="action_cashflow_bank_facility"
+              sequence="20"/>
+
+
+    <!-- ========================================================= -->
+    <!--  SIMULAZIONI WHAT-IF                                      -->
+    <!-- ========================================================= -->
+
+    <record id="action_cashflow_simulation" model="ir.actions.act_window">
+        <field name="name">Simulazioni What-If</field>
+        <field name="res_model">cashflow.simulation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cashflow_simulation"
+              name="Simulazioni"
+              parent="menu_cashflow_root"
+              action="action_cashflow_simulation"
+              sequence="25"/>
+
+
+</odoo>
